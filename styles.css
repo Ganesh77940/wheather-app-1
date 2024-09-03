@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+:root {
+  --primary-bg: #1e1e2f;
+  --secondary-bg: #282a36;
+  --accent-color: #ff6b81;
+  --text-color: #f8f8f2;
+  --secondary-text-color: #6272a4;
+  --highlight-color: #50fa7b;
+  --border-color: #44475a;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: var(--primary-bg);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+#weather-container {
+  background: var(--secondary-bg);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--border-color);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--highlight-color);
+  text-shadow: 0 0 10px var(--highlight-color);
+}
+
+#search-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid var(--border-color);
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  background: var(--primary-bg);
+  color: var(--text-color);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: 2px solid var(--border-color);
+  border-radius: 0 25px 25px 0;
+  background: var(--accent-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--highlight-color);
+}
+
+#weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 10px var(--highlight-color));
+}
+
+.temperature {
+  font-size: 3em;
+  margin: 0;
+  color: var(--accent-color);
+}
+
+.city {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: var(--highlight-color);
+}
+
+.description {
+  font-size: 1em;
+  margin: 5px 0;
+  color: var(--secondary-text-color);
+}
+
+#hourly-forecast {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.hourly-item {
+  flex: 0 0 auto;
+  text-align: center;
+  margin: 0 10px;
+  padding: 10px;
+  background: var(--secondary-bg);
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  transition: 0.3s;
+}
+
+.hourly-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--highlight-color);
+}
+
+.hourly-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.hourly-item span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+.loading {
+  font-size: 1.5em;
+  color: var(--highlight-color);
+  text-shadow: 0 0 10px var(--highlight-color);
+}
